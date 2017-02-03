@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #121134;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: rgba(255,0,255,1);
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+ul{
+ padding: 10px;
+}
+li{
+ display: inline;
+ padding: 0px 5px 0px 5px;
+ bottom: 0;
+margin: 0;
+}
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.indian{
+  background-image: url("http://eatatthali.com/wp-content/uploads/2014/05/jpeg-indian-foods-4-1024x819.jpg");
+background-position: center;
+}
+.chinese{
+  background-image: url("http://foodsecret.com/wp-content/uploads/2015/10/Chinese-Food.jpg");
+}
+.italian{
+  background-image: url("http://tasteofsicilyinco.com/wp-content/uploads/2015/12/Best-Italian-restaurants-in-centennial-colorado-768x342.jpg");
+ background-position: center;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>FOOD SEARCH</h1>
+<h2>Do what tastes right</h2>
+<div class="indian">
+  <p>INDIAN CUISINE<br />
+  <small>Indian cuisine encompasses a wide variety of regional and traditional cuisines native to India. These cuisines vary significantly from each other and use locally available spices, herbs, vegetables and fruits. Indian cuisine has been and is still evolving, as a result of the nation's cultural interactions with other societies.<ul><li><a href="#">know more about cuisine</a></li><li><a href="#">restuarants in your area</a></li><li><a href="#">recipies of some dishes</a></li></ul> </small></p>
+</div>
+
+<div class="chinese">
+  <p>CHINESE CUISINE <br />
+  <small>Chinese cuisine is an important part of Chinese culture, which includes cuisines originating from the diverse regions of China, as well as from Chinese people in other parts of the world. <ul><li><a href="#">know more about cuisine</a></li><li><a href="#">restuarants in your area</a></li><li><a href="#">recipies of some dishes</a></li></ul></small></p>
+</div>
+  
+<div class="italian">
+  <p>ITALIAN CUISINE<br />
+  <small>Italian cuisine is characterized by its simplicity, with many dishes having only four to eight ingredients.Cheese and wine are a major part of the cuisine.<ul><li><a href="#">know more about cuisine</a></li><li><a href="#">restuarants in your area</a></li><li><a href="#">recipies of some dishes</a></li></ul></small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
